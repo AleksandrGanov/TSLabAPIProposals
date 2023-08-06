@@ -23,12 +23,12 @@ bool Сontext.StopAgent(string agentName){}
 bool Сontext.StopAllAgents(){}
 
 // возвращает коллекцию имен и статусов агентов
-IEnumerable<(string, AgentStatus)> Context.GetAgentsInfo(){}
+IEnumerable<(string scriptName, AgentStatus agentStatus)> Context.GetAgentsInfo(){}
 
 // статусы агентов
 enum AgentStatus
 {
-  Runnig, // агент работает
+  Running, // агент работает
   Stopped, // агент остановлен
   Error // агент в состоянии ошибки
 }
