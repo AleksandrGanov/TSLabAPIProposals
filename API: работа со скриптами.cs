@@ -11,5 +11,5 @@ bool Сontext.CloseScript(string scriptName)
 // закрывает все открытые скрипты
 bool Сontext.CloseAllScripts
 
-// возвращает коллекцию имен закрытых скриптов
+// возвращает коллекцию имен открытых скриптов
 IEnumerable<string> GetAllOpenedScripts()
