@@ -1,6 +1,6 @@
-// создает агента с указанными именем, инструментами, параметрами
+// создает агента с указанными именем, источником, инструментами
 // bool - возвращает True если агент успешно создан (не произошло ошибки создания)
-bool Сontext.CreateAgent(string agentName, IEnumerable<(source, sec)>, IEnumerable<(paramName, paramValue)>){}
+bool Сontext.CreateAgent(string agentName, IEnumerable<(source, sec)>){}
 
 // удаляет агента с указанными именем
 // bool - возвращает True если агент успешно удален (не произошло ошибки создания)
@@ -32,3 +32,21 @@ enum AgentStatus
   Stopped, // агент остановлен
   Error // агент в состоянии ошибки
 }
+
+// метод выдает коллекцию имен торговых параметров агента (торговые 
+IEnumerable<(string tradeParam, object paramValue)> GetAgentTradeParams(){}
+
+// метод выдает коллекцию имен торговых параметров агента (торговые 
+IEnumerable<(string tradeParam, object paramValue)> GetAgentParams(){}
+
+// метод устанавливает торговые параметры агента
+// bool - возвращает True только в случае если все параметры удалось установить
+// False - возвращется при наличии любых ошибок
+bool SetAgentTradeParams(IEnumerable<(string paramName, object paramValue)>)
+
+// метод устанавливает параметры агента
+// bool - возвращает True только в случае если все параметры удалось установить
+// False - возвращется при наличии любых ошибок
+bool SetAgentParams(IEnumerable<(string paramName, object paramValue)>)
+
+// все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
