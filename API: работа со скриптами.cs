@@ -12,4 +12,4 @@ bool Сontext.CloseScript(string scriptName){}
 bool Сontext.CloseAllScripts(){}
 
 // возвращает коллекцию имен открытых скриптов
-IEnumerable<string> GetAllOpenedScripts(){}
+IEnumerable<string> GetOpenedScriptsInfo(){}
