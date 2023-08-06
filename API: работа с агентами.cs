@@ -25,14 +25,6 @@ bool Сontext.StopAllAgents(){}
 // возвращает коллекцию имен и статусов агентов
 IEnumerable<(string scriptName, AgentStatus agentStatus)> Context.GetAgentsInfo(){}
 
-// статусы агентов
-enum AgentStatus
-{
-  Running, // агент работает
-  Stopped, // агент остановлен
-  Error // агент в состоянии ошибки
-}
-
 // метод выдает коллекцию имен торговых параметров агента (торговые 
 IEnumerable<(string tradeParam, object paramValue)> GetAgentTradeParams(){}
 
@@ -50,3 +42,11 @@ bool SetAgentTradeParams(IEnumerable<(string paramName, object paramValue)>)
 bool SetAgentParams(IEnumerable<(string paramName, object paramValue)>)
 
 // все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
+
+// статусы агентов
+enum AgentStatus
+{
+  Running, // агент работает
+  Stopped, // агент остановлен
+  Error // агент в состоянии ошибки
+}
