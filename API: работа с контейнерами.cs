@@ -17,6 +17,5 @@ bool Сontext.LoadContainer(string scriptName, string Path){}
 IEnumerable<string paramName> Context.GetContainerParams(){}
 
 /* Примечания:
-  -----------
   -- все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
   -- вместо False можно выдать соответствующие Exception в необходимых случаях */
