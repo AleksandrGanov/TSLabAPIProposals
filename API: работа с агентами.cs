@@ -28,7 +28,7 @@ IEnumerable<(string, AgentStatus)> GetAgentsInfo(){}
 // статусы агентов
 enum AgentStatus
 {
-  Runnig,
-  Stoped,
-  Error
+  Runnig, // агент работает
+  Stopped, // агент остановлен
+  Error // агент в состоянии ошибки
 }
