@@ -26,20 +26,20 @@ bool Сontext.StopAllAgents(){}
 IEnumerable<(string scriptName, AgentStatus agentStatus)> Context.GetAgentsInfo(){}
 
 // метод выдает коллекцию имен торговых параметров агента (торговые 
-IEnumerable<(string tradeParam, object paramValue)> GetAgentTradeParams(){}
+IEnumerable<(string tradeParam, object paramValue)> Context.GetAgentTradeParams(){}
 
 // метод выдает коллекцию имен торговых параметров агента (торговые 
-IEnumerable<(string tradeParam, object paramValue)> GetAgentParams(){}
+IEnumerable<(string tradeParam, object paramValue)> Context.GetAgentParams(){}
 
 // метод устанавливает торговые параметры агента
 // bool - возвращает True только в случае если все параметры удалось установить
 // False - возвращется при наличии любых ошибок
-bool SetAgentTradeParams(IEnumerable<(string paramName, object paramValue)>)
+bool Context.SetAgentTradeParams(IEnumerable<(string paramName, object paramValue)>)
 
 // метод устанавливает параметры агента
 // bool - возвращает True только в случае если все параметры удалось установить
 // False - возвращется при наличии любых ошибок
-bool SetAgentParams(IEnumerable<(string paramName, object paramValue)>)
+bool Context.SetAgentParams(IEnumerable<(string paramName, object paramValue)>)
 
 // все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
 
