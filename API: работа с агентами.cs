@@ -47,8 +47,6 @@ bool Context.SetAgentTradeParams(string agentName, IEnumerable<(string paramName
 // в статусах: Running, Error, заканчивая неверное переданным именем агента, именами/типами параметров
 bool Context.SetAgentParams(string agentName, IEnumerable<(string paramName, object paramValue)>)
 
-// все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
-
 // статусы агентов
 enum AgentStatus
 {
@@ -56,3 +54,8 @@ enum AgentStatus
   Stopped, // агент остановлен
   Error // агент в состоянии ошибки
 }
+
+// Примечания:
+// -----------
+// все задачи по определению типов значений параметров ложатся на пользователя, чтобы не усложнять API
+// вместо False можно выдать соответствующие Exception в необходимых случаях
