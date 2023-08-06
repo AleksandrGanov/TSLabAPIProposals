@@ -23,7 +23,7 @@ bool Сontext.StopAgent(string agentName){}
 bool Сontext.StopAllAgents(){}
 
 // возвращает коллекцию имен и статусов агентов
-IEnumerable<(string, AgentStatus)> GetAllAgentsStatus(){}
+IEnumerable<(string, AgentStatus)> GetAgentsInfo(){}
 
 // статусы агентов
 enum AgentStatus
